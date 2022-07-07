@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pequeño Botánico</title>
+    <!-- link boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="barraNavegacion d-flex justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="registro.html">Registro</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active fs-5" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-5" href="#">Características</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-5" href="#">Precios</a>
+                  </li>
+                  <li class="nav-item">
+                    
+                    <a class="nav-link fs-5 alert-dark" href="#">
+                        <i class="bi bi-basket2-fill"></i>
+                        Carrito <span id="cantidadCarrito" class="fw-bold">(vacío)</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <header>
+          <h1 class="btn-success text-center">El Pequeño Botánico</h1>
+
+          <h2 class="mt-4 mb-3">Hola! <span id="nombreUsuario"></span>, espero encuententres alguna plantita que te haga feliz. </h2>
+        </header>
+        
+        <div class="row d-inline-flex" id="listaDeProductos">
+        </div>
+        
+        
+       
+    </div>
+    <script src="main.js" ></script>
+</body>
+</html>
