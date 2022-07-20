@@ -90,13 +90,8 @@ updateCartNumber();
 
 let buyButtonElements = document.getElementsByClassName('botonCarrito');
 
-for (const button of buyButtonElements) {
-    button.addEventListener('click', (event) => {
-        let selectedProduct = products.find( (product) => {
-            return product.name === button.id
-        });
-
-        let exist = cart.find(element => element.name === selectedProduct.name);
+const addToCart = (selectedProduct) => {
+    let exist = cart.find(element => element.name === selectedProduct.name);
         console.log('existe?', exist);
         console.log('prod seleccionado', selectedProduct);
         if(exist){
@@ -109,5 +104,21 @@ for (const button of buyButtonElements) {
 
         localStorage.setItem('carrito', JSON.stringify(cart));
         updateCartNumber();
+
+        Swal.fire({
+            title: 'Genial',
+            text: `Tu producto "${selectedProduct.name}" se ha añadido al carrito`,
+            icon: 'success',
+            timer: 4000 
+        });   
+}
+
+for (const button of buyButtonElements) {
+    button.addEventListener('click', (event) => {
+        let selectedProduct = products.find( (product) => {
+            return product.name === button.id
+        });
+        addToCart(selectedProduct);
     });
+   
 }
