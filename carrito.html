@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Pequeño Botánico</title>
+    <title>Carrito</title>
     <!-- link boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
+<body >
     <div class="barraNavegacion d-flex justify-content-end">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -41,15 +41,50 @@
             </div>
           </nav>
     </div>
+
     <div class="container">
         <header>
-          <h1 class="btn-success text-center">El Pequeño Botánico</h1>
-
-          <h2 class="mt-4 mb-3">Hola! <span id="nombreUsuario"></span>, espero encuententres alguna plantita que te haga feliz. </h2>
+          <h1 class="btn-success text-center">Carrito</h1>
         </header>
-        
-        <div class="row d-inline-flex" id="listaDeProductos"></div>
     </div>
+    
+
+      <section class="vh-100">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <p><span class="h2">Lista de Productos </span><span class="h4">(1 item in your cart)</span></p>
+              <div class="row d-inline-flex">
+                
+                <div id="carrito"></div>
+        
+                <div>
+                  <div class="card mb-5">
+                    <div class="card-body p-4" style="background-color: #b3f3bf;">
+          
+                      <div class="float-end" >
+                        <p class="mb-0 me-5 d-flex align-items-center" >
+                          <span class="text-muted me-2">Orden total:</span>
+                          <span class="lead fw-normal" id="total">$799</span>
+                        </p>
+                      </div>
+          
+                    </div>
+                  </div>
+          
+                  <div class="d-flex justify-content-end">
+                    <a  href="index.html" class="btn btn-light btn-lg me-2" style="background-color: #d2f8d9;">Continuar comprando</a>
+                    <button type="button" class="btn btn-success btn-lg">Pagar</button>
+                  </div>
+                </div>
+                
+      
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <script src="main.js" ></script>
 </body>
 </html>
