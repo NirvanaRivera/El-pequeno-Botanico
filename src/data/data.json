@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Romero", 
+        "price": 450, 
+        "img": "./img/romero.png"
+    },
+    {
+        "name": "Jazmín", 
+        "price": 530, 
+        "img": "./img/jazmin.jpg"
+    },
+    {
+        "name": "Menta", 
+        "price": 250, 
+        "img": "./img/menta.jpg"
+    },
+    {
+        "name": "Lavanda", 
+        "price": 400, 
+        "img": "./img/lavanda.jpg"
+    }
+]
