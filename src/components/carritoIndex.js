@@ -46,12 +46,43 @@ export const mostrarCarrito = (cartList) =>{
     });
 
     let elementTotal = document.getElementById('total');
+    let itemQuantity = document.getElementById( 'itemsCarrito' );
+
+   
 
     //cálculo del valor total de la compra
     let total = 0;
+    let totalItems = 0;
     cart.forEach((product) => {
         total += product.quantity*product.price;
+        totalItems += product.quantity;
     })
 
+    itemQuantity.innerText = `(Hay ${totalItems} items agregados al carrito).`;
     elementTotal.innerText = `$${total}`;
+
+
+    //funcionamiento del botón de comprar.
+    let buyButton = document.getElementById('botonComprar');
+    buyButton.addEventListener('click', (event) =>{
+      Swal.fire({
+        title: `El total de la compra es $${total}`,
+        text: "Desea pagar la compra?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, quiero pagar!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Genial',
+            `Su compra se ha realizado con éxito!`,
+            'success',
+            4000 
+          )
+        }
+      })  
+    })
 }
